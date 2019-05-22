@@ -1,6 +1,6 @@
 {
   "name": "color-pallate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "dependencies": {
     "@babel/core": "7.4.3",
@@ -129,5 +129,3 @@
     "presets": [
       "react-app"
     ]
-  }
-}
