@@ -1,12 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './Color-pallate';
-import * as serviceWorker from './serviceWorker';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Pallate from './Color-pallate'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export default class ExampleComponent extends Component {
+  static propTypes = {
+    setColorPallate: PropTypes.func
+  }
+  // eslint-disable-next-line no-useless-constructor
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div >
+        <Pallate setColorPallate={this.props.setColorPallate} />
+      </div>
+    )
+  }
+}
