@@ -1,10 +1,13 @@
 {
   "name": "color-pallate-react",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "description": "Selecting Color from pallate 1. Use- To apply the color 2. There are 12  Colors in this package. 3. This is written in funtional Component. 4. Here the concepts of react-hooks has been used. 5. This library is small example of how selected color from color-pallate can be applied to the button.",
   "author": "RituAnand",
   "license": "MIT",
-  "repository": "RituAnand/color-pallate-react",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RituAnand/React-Color-Pallate.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -60,5 +63,17 @@
   ],
   "dependencies": {
     "@material-ui/icons": "^4.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/RituAnand/React-Color-Pallate/issues"
+  },
+  "homepage": "https://github.com/RituAnand/React-Color-Pallate#readme",
+  "directories": {
+    "example": "example"
+  },
+  "keywords": [
+    "react",
+    "selectColor",
+    "ColorPicker"
+  ]
 }
