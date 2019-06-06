@@ -1,27 +1,27 @@
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable no-multi-spaces */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Color from './Color'
-import ColorLens from '@material-ui/icons/ColorLens'
 import PropTypes from 'prop-types'
 
 const ColorPallate = (props) => {
-  const [coloring, setColoring] = useState('grey')
   const [colors, setColor] = useState(
-    [{color: '#4B7DF2', isSelect: true},
-      {color: '#EA8875', isSelect: false},
-      {color: '#81543D', isSelect: false},
-      {color: '#6DB448', isSelect: false},
-      {color: '#54B2E8', isSelect: false},
-      {color: '#00838f', isSelect: false},
-      {color: '#ef6c00', isSelect: false},
-      {color: '#d92626', isSelect: false},
-      {color: '#5e495a', isSelect: false},
-      {color: '#616161', isSelect: false},
-      {color: '#880e4f', isSelect: false},
-      {color: '#e96058', isSelect: false}])
-  const [visible, setVisible] = useState(false)
+    [{color: '#98AAB3', isSelect: false},
+      {color: '#8F7EE6', isSelect: false},
+      {color: '#00AAFF', isSelect: false},
+      {color: '#30BFBF', isSelect: false},
+      {color: '#47CC8A', isSelect: false},
+      {color: '#8ACC47', isSelect: false},
+      {color: '#FFD500', isSelect: false},
+      {color: '#FF9F1A', isSelect: false}
+    ])
 
+  useEffect(() => {
+    const index = props.selectedIndex ? props.selectedIndex : 0
+    const temp = [...colors]
+    temp[index].isSelect = true
+    props.setColorPallate(temp[index].color, index)
+    setColor(temp)
+  }, [])
+  
   const hadleSelect = (index, setColorPallate) => {
     const item = [...colors]
     const prevIndex = item.findIndex(e => e.isSelect)
@@ -31,20 +31,22 @@ const ColorPallate = (props) => {
 
     item[index].isSelect = !item[index].isSelect
     setColor(item)
-    setColoring(item[index].color)
-    setVisible(!visible)
-    setColorPallate(item[index].color)
+    setColorPallate(item[index].color, index)
     return item[index].color
   }
 
   return (
     <div>
-      <ColorLens style={{color: coloring, outline: 'none', border: 'none', height: 42, width: 30}} onClick={() => setVisible(!visible)} />
-      {visible ? <Color  colors={colors} hadleSelect={(i) => hadleSelect(i, props.setColorPallate)}  /> : null}
+      <Color  colors={colors} hadleSelect={(i) => hadleSelect(i, props.setColorPallate)} height={props.height} width={props.width} padding={props.padding} borderRadius={props.borderRadius} />
     </div>
   )
 }
 ColorPallate.proTypes = {
-  setColorPallate: PropTypes.func
+  setColorPallate: PropTypes.func,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  padding: PropTypes.number,
+  borderRadius: PropTypes.number,
+  selectedIndex: PropTypes.number
 }
 export default ColorPallate
