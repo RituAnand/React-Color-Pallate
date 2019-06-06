@@ -40,7 +40,7 @@ export default class App extends Component {
     }
   }
 
- setColorPallate =(color)=> {
+ setColorPallate =(color,index)=> {
    this.setState({colorSelected:color,selectedIndex:index})
    console.log("selected Color",color)
   };
@@ -83,7 +83,7 @@ export default class Pallate extends Component {
     }
   }
 
- setColorPallate =(color)=> {
+  setColorPallate =(color,index)=> {
    this.setState({colorSelected:color,selectedIndex:index})
    console.log("selected Color",color)
   };
