@@ -3,7 +3,7 @@ import Color from './Color'
 import PropTypes from 'prop-types'
 
 const ColorPallate = (props) => {
-  const [colors, setColor] = useState(
+  const [colors, setColor] = useState(props.colours ? props.colours :
     [{color: '#98AAB3', isSelect: false},
       {color: '#8F7EE6', isSelect: false},
       {color: '#00AAFF', isSelect: false},
@@ -47,6 +47,7 @@ ColorPallate.proTypes = {
   width: PropTypes.number,
   padding: PropTypes.number,
   borderRadius: PropTypes.number,
-  selectedIndex: PropTypes.number
+  selectedIndex: PropTypes.number,
+  colours: PropTypes.object
 }
 export default ColorPallate

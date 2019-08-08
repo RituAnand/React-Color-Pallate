@@ -11,17 +11,18 @@ export default class ExampleComponent extends Component {
     width: PropTypes.number,
     padding: PropTypes.number,
     borderRadius: PropTypes.number,
-    selectedIndex: PropTypes.number
+    selectedIndex: PropTypes.number,
+    colours: PropTypes.object
   }
   // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
   }
   render() {
-    const {setColorPallate, height, width, padding, borderRadius, selectedIndex} = this.props
+    const {setColorPallate, height, width, padding, borderRadius, selectedIndex, colours} = this.props
     return (
       <div >
-        <Pallate setColorPallate={setColorPallate} height={height} width={width} padding={padding} borderRadius={borderRadius} selectedIndex={selectedIndex} />
+        <Pallate setColorPallate={setColorPallate} height={height} width={width} padding={padding} borderRadius={borderRadius} selectedIndex={selectedIndex} colours={colours} />
       </div>
     )
   }

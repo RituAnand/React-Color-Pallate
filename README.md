@@ -36,7 +36,16 @@ export default class App extends Component {
     super(props)
     this.state={
       colorSelected:'',
-      selectedIndex:0
+      selectedIndex:0,
+      colours:[{color: '#98AAB3', isSelect: false},
+      {color: '#8F7EE6', isSelect: false},
+      {color: '#00AAFF', isSelect: false},
+      {color: '#30BFBF', isSelect: false},
+      {color: '#47CC8A', isSelect: false},
+      {color: '#8ACC47', isSelect: false},
+      {color: '#FFD500', isSelect: false},
+      {color: '#FF9F1A', isSelect: false}
+    ]
     }
   }
 
@@ -52,7 +61,7 @@ export default class App extends Component {
         //  If props are not sent then default props are sent
          <ExampleComponent setColorPallate={this.setColorPallate} />
         // If props are sent
-         <ExampleComponent setColorPallate={this.setColorPallate} height={7} width={7} padding={15} borderRadius={20} selectedIndex={this.state.selectedIndex}/>
+         <ExampleComponent setColorPallate={this.setColorPallate} height={7} width={7} padding={15} borderRadius={20} selectedIndex={this.state.selectedIndex} colours={this.state.colours}/>
       </div>
     )
   }
