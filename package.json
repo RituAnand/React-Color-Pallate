@@ -1,6 +1,6 @@
 {
   "name": "color-pallate-react",
-  "version": "1.0.51",
+  "version": "1.1.53",
   "description": "Selecting Color from pallate",
   "author": "RituAnand",
   "license": "MIT",
@@ -61,9 +61,6 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "@material-ui/icons": "^4.0.0"
-  },
   "bugs": {
     "url": "https://github.com/RituAnand/React-Color-Pallate/issues"
   },

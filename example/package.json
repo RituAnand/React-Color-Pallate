@@ -5,8 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.0.0",
-    "color-pallate-react": "^1.0.48",
+    "color-pallate-react": "^1.1.53",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

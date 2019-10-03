@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import Color from './Check-Color'
-import ColorLens from '@material-ui/icons/ColorLens'
+import {ColorPallaete} from './Color-pallaete'
 import PropTypes from 'prop-types'
 
 export const CheckColorPallate = (props) => {
@@ -48,8 +48,8 @@ export const CheckColorPallate = (props) => {
 
   return (
     <div>
-      <ColorLens style={{color: coloring, outline: 'none', border: 'none', height: 42, width: 30}} onClick={() => setVisible(!visible)} />
-      {visible ? <Color  colors={colors} hadleSelect={(i) => hadleSelect(i, props.setColorPallate)} /> : null}
+      <div onClick={() => setVisible(!visible)} ><ColorPallaete name={'palette'} color={coloring} outline='none' border='none' size='24px' /></div>
+      {visible ? <Color colors={colors} hadleSelect={(i) => hadleSelect(i, props.setColorPallate)} /> : null}
     </div>
   )
 }

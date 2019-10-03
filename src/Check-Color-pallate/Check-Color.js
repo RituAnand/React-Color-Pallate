@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import Check from '@material-ui/icons/Check'
 import PropTypes from 'prop-types'
+import {Check} from './Check'
 
 import styles from './Check-Color.css'
 class Color extends Component {
@@ -21,7 +21,7 @@ class Color extends Component {
             <div className={styles.colorpallate_element} style={{background: item.color}}>
               {item.isSelect
                 ? <div className={styles.colorpallate_close}>
-                  <Check style={{color: item.color, fontSize: '10px', outline: 'none'}} />
+                  <Check name={'check'} color={item.color} size='10px' outline='none' />
                 </div> : null
               }
             </div>

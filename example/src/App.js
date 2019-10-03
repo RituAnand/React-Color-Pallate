@@ -31,7 +31,7 @@ export default class App extends Component {
     return (
       <div>
         <ExampleComponent setColorPallate={this.setColorPallate} height={7} width={7}  borderRadius={20} colours={this.state.colours}/>
-        {/* <CheckColorPallate setColorPallate={this.setColorPallate} selectedIndex={this.state.selectedIndex} /> */}
+         <CheckColorPallate setColorPallate={this.setColorPallate} selectedIndex={this.state.selectedIndex} /> 
       </div>
     )
   }
